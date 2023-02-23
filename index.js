@@ -3,6 +3,7 @@ const descriptionInput = document.getElementById('description-input');
 
 var mesAtual = 'janeiro';
 var entradas = 8000;
+
 var saidas = 400;
 var saldo = 1000;
 
@@ -81,16 +82,14 @@ function addEarning() {
   document.getElementById('earnings-list').appendChild(li);
 }
 
-for (var i = 0; i < earningsList.length; i++) {
-  var li = document.createElement('li');
-  li.innerText = `${earningsList[i].description}: R$ ${earningsList[i].value}`;
-
-  document.getElementById('earnings-list').appendChild(li);
+function createLists(array, listId) {
+  for (let item of array) {
+    var li = document.createElement('li');
+    li.innerText = `${item.description}: R$ ${item.value}`;
+    document.getElementById(`${listId}`).appendChild(li);
+  }
 }
 
-for (var i = 0; i < expensesList.length; i++) {
-  var li = document.createElement('li');
-  li.innerText = `${expensesList[i].description}: R$ ${expensesList[i].value}`;
+createLists(earningsList, 'earnings-list');
 
-  document.getElementById('expenses-list').appendChild(li);
-}
+createLists(expensesList, 'expenses-list');
