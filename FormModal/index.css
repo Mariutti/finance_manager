@@ -1,5 +1,6 @@
 /* open modal button */
-#open-modal-button {
+#open-modal-button,
+.button {
   border: none;
   outline: none;
   background-color: #04aa6d;
@@ -8,6 +9,12 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+}
+.button > a,
+.button > a:link,
+.button > a:visited {
+  text-decoration: none;
+  color: #fff
 }
 
 /* The Modal (background) */
@@ -122,6 +129,12 @@ fieldset legend {
   cursor: pointer;
   width: 100%;
   opacity: 1;
+  border-radius: 0.3rem;
+}
+
+.expense-button{
+  background-color: #9b2525;
+;
 }
 
 .add-new-financial-movement-button:hover {

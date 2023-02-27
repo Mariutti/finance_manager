@@ -32,6 +32,13 @@ body {
   font-size: 1.75rem;
 }
 
+.btnDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
 .indicators {
   display: flex;
   flex-direction: row;

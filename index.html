@@ -17,7 +17,12 @@
   <body>
     <div class="header">
       <h1>Meu saldo de <span id="month"></span></h1>
-      <button id="open-modal-button">Adicionar movimentação</button>
+      <div class="btnDiv">
+        <button class="button btnExpenses">
+          <a href="./GroupExpenses/groupexpenses.html">despesas</a>
+        </button>
+        <button id="open-modal-button">Adicionar movimentação</button>
+      </div>
 
       <!-- The Modal -->
       <div id="form-modal" class="modal">
@@ -46,7 +51,7 @@
             <label for="value"><b>Valor</b></label>
             <input
               type="number"
-              placeholder="50"
+              placeholder="0"
               name="value"
               id="value-input"
               required
